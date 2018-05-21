@@ -1,0 +1,153 @@
+//App colors
+$first-color: #34495E;
+$successful-color: #2ECC71;
+$remove-color: #e74c3c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+%btn-setup {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ECF0F1;
+}
+
+.main {
+  width: 600px;
+  min-height: 700px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding-bottom: 50px;
+  &__heading {
+    color: $first-color;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 70px;
+  }
+}
+
+.app-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 10%;
+  &__label {
+    color: $first-color;
+    font-size: 18px;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__input-text {
+    width: 80%;
+    height: 35px;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  &__submit {
+    position: relative;
+    width: 24%;
+    height: 35px;
+    color: #FFFFFF;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $successful-color;
+    transition: background-color 0.3s linear;
+    @extend %btn-setup;
+    &:hover {
+      background-color: darken($successful-color, 10);
+    }
+  }
+  &__text-info {
+    display: none;
+    margin-top: 5px;
+    font-size: 18px;
+    &--error {
+      display: block;
+      color: #e74c3c;
+    }
+  }
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0 15%;
+  margin-top: 50px;
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-top: 15px;
+    border-bottom: 1px solid $first-color;
+    &--complete {
+      text-decoration: line-through;
+    }
+    .task-name {
+      font-size: 24px;
+      color: $first-color;
+    }
+  }
+  .btn-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      width: 100%;
+      height: auto;
+      fill: $first-color;
+      transition: fill 0.3s linear;
+    }
+    .btn-remove {
+      width: 30px;
+      height: 30px;
+      @extend %btn-setup;
+    }
+    .btn-remove:hover > .icon {
+      fill: $remove-color;
+    }
+    .btn-check {
+      width: 24px;
+      height: 24px;
+      @extend %btn-setup;
+    }
+    .btn-check:hover > .icon {
+      fill: $successful-color;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    background-color: #FFFFFF;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-shadow: none;
+    padding-top: 20px;
+    &__heading {
+      margin-top: 0;
+    }
+  }
+}
