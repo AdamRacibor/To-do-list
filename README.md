@@ -5,7 +5,7 @@ Kimże byłby junior bez własnej To do listy 😃 Strona ta służy do zarządz
 ## Technologie z których korzystałem:
 
  - HTML 5 (metodologia BEM)
- - SASS
+ - CSS3
  - JavaScript (ES6)
  
  LIVE: [https://danroxx.github.io/To-do-list/](https://danroxx.github.io/To-do-list/)
