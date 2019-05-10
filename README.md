@@ -8,4 +8,4 @@ Kimże byłby junior bez własnej To do listy 😃 Strona ta służy do zarządz
  - CSS3
  - JavaScript (ES6)
  
- LIVE: [https://danroxx.github.io/To-do-list/](https://danroxx.github.io/To-do-list/)
+ LIVE: [https://adamracibor.github.io/To-do-list/](https://adamracibor.github.io/To-do-list/)
